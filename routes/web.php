@@ -25,6 +25,10 @@ Route::middleware('auth:users')->group(function () {
     ItemController::class,
     'index'
   ])->name('items.index');
+  Route::get(
+    'show/{item}',
+    [ItemController::class, 'show']
+  )->name('items.show');
 });
 
 // Route::get('/dashboard', function () {
