@@ -19,3 +19,11 @@ mix
     require("tailwindcss"),
     require("autoprefixer"),
   ]);
+
+mix.webpackConfig({
+  stats: {
+    children: true,
+  },
+});
+
+mix.disableNotifications();
