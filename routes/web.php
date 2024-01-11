@@ -39,6 +39,7 @@ Route::prefix('cart')
       CartController::class,
       'add'
     ])->name('cart.add');
+    Route::post('delete/{item}', [CartController::class, 'delete'])->name('cart.delete');
   });
 
 // Route::get('/dashboard', function () {
